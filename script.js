@@ -15,6 +15,7 @@ let direction = "right";
 let gameInterval;
 let gameSpeedDelay = 200;
 let gameStarted = false;
+let isPaused = false;
 
 ///draw game map,snake,food
 function draw() {
@@ -145,6 +146,7 @@ function handleKeyPress(event) {
       case "ArrowRight":
         direction = "right";
         break;
+
       default:
         break;
     }
@@ -221,5 +223,5 @@ function showGameOver() {
     gameOverText.style.display = "none";
     instructionText.style.display = "block";
     logo.style.display = "block";
-  }, 4000);
+  }, 2500);
 }
